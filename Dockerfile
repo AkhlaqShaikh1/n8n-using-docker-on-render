@@ -1,14 +1,9 @@
-FROM n8nio/n8n
-
+FROM n8nio/n8n:latest
 
 USER root
 
+ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 
-# Use n8n default user
 USER node
 
-# Expose port used by n8n
-EXPOSE 5678
-
-# Start n8n with default command
 CMD ["n8n"]
